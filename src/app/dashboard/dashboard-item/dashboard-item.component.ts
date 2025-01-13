@@ -1,12 +1,13 @@
-import { Component } from '@angular/core';
+import { Component, input } from '@angular/core';
 
 @Component({
-  selector: 'app-bashboard-item',
+  selector: 'app-dashboard-item',
   standalone: true,
   imports: [],
-  templateUrl: './bashboard-item.component.html',
-  styleUrl: './bashboard-item.component.css'
+  templateUrl: './dashboard-item.component.html',
+  styleUrl: './dashboard-item.component.css',
 })
 export class DashboardItemComponent {
-
+  image = input.required<{ src: string; alt: string }>();
+  title = input.required<string>();
 }
