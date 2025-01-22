@@ -18,6 +18,16 @@ export class ServerStatusComponent implements OnInit {
   currentStatus = signal<'online' | 'offline' | 'unknown'>('online');
   private destroyRef = inject(DestroyRef);
 
+  // effect((onCleanup) => {
+  //   const tasks = getTasks();
+  //   const timer = setTimeout(() => {
+  //     console.log(`Current number of tasks: ${tasks().length}`);
+  //   }, 1000);
+  //   onCleanup(() => {
+  //     clearTimeout(timer);
+  //   });
+  // });
+
   constructor() {
     effect(() => {
       console.log(this.currentStatus());
