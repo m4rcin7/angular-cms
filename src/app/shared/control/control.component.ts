@@ -18,7 +18,7 @@ import {
   styleUrl: './control.component.css',
   encapsulation: ViewEncapsulation.None,
   host: {
-    class: 'contol',
+    class: 'control',
     '(click)': 'onClick()',
   },
 })
