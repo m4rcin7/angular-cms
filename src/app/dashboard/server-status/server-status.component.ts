@@ -15,7 +15,7 @@ import {
   styleUrl: './server-status.component.css',
 })
 export class ServerStatusComponent implements OnInit {
-  currentStatus = signal<'online' | 'offline' | 'unknown'>('online');
+  currentStatus = signal<'online' | 'offline' | 'unknown'>('offline');
   private destroyRef = inject(DestroyRef);
 
   // effect((onCleanup) => {
@@ -32,7 +32,6 @@ export class ServerStatusComponent implements OnInit {
     effect(() => {
       console.log(this.currentStatus());
     });
-    console.log(this.currentStatus());
   }
 
   ngOnInit() {
